@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gpk">
+<title>‘À∂Ø</title>
+<style>
+*{margin:0;padding:0}
+#div1 ul{width:1800px;position:absolute;left:0;top:0}
+#div1{width:180px;height:300px;background:red;position:relative;margin:0px auto;overflow:hidden;}
+#div1 ul li{float:left;list-style:none;}
+</style>
+<script>
+var suspend=0;
+window.onload=function (){
+    var oDiv=document.getElementById("div1");
+    var oUl=oDiv.getElementsByTagName("ul")[0];
+    oUl.innerHTML=oUl.innerHTML+oUl.innerHTML
+    function movement(){
+	var timer=setInterval(function (){
+    if(oUl.offsetLeft==-oUl.offsetWidth/2){
+	oUl.style.left="0";
+	};
+    oUl.style.left=oUl.offsetLeft-10+"px";
+    suspend=suspend+10;
+	if(suspend==180){
+	clearInterval(timer);
+	
+	suspend=0;
+	setTimeout(movement,1000);
+	};
+},30);};
+    movement();
+};
+</script>
+</head>
+<body>
+<div id="div1">
+<ul>
+    <li><img src="1.jpg"/></li>
+	<li><img src="3.jpg"/></li>
+	<li><img src="4.jpg"/></li>
+	<li><img src="5.jpg"/></li>
+    <li><img src="6.jpg"/></li>
+
+</ul>
+</body>
+</html>
