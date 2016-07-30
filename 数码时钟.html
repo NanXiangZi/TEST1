@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gpk">
+<title>Êý×ÖÊ±ÖÓ</title>
+<script>
+function toDou(n){
+if(n<10)
+{
+return "0"+n;
+}
+else{
+return ""+n;
+}
+}
+window.onload=function(){
+   var aImg=document.getElementsByTagName("img");
+   function TimeShow(){
+   var oDate=new Date();
+   var str=toDou(oDate.getFullYear())+toDou(oDate.getMonth()+1)+toDou(oDate.getDate())+toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+
+   for(var i=0;i<aImg.length;i++){
+         aImg[i].src="image/"+str.charAt(i)+".jpg";
+   }
+ };
+   setInterval(TimeShow,1000);
+   TimeShow();
+ }
+</script>
+</head>
+<body style="background:black;text-align:center;color:white;font-size:50px">
+</br>
+<img src="image/0.jpg" width="10%" height="10%"/>
+<img src="image/0.jpg" width="10%" height="10%"/>
+<img src="image/0.jpg" width="10%" height="10%"/>
+<img src="image/0.jpg" width="10%" height="10%"/>
+</br>
+<img src="image/0.jpg" width="10%" height="10%"/>
+<img src="image/0.jpg" width="10%" height="10%"/>
+
+<img src="image/0.jpg" width="10%" height="10%"/>
+<img src="image/0.jpg" width="10%" height="10%"/>
+</br>
+<img src="image/0.jpg" width="10%" height="10%"/>
+<img src="image/0.jpg" width="10%" height="10%"/>
+:
+<img src="image/0.jpg" width="10%" height="10%"/>
+<img src="image/0.jpg" width="10%" height="10%"/>
+:
+<img src="image/0.jpg" width="10%" height="10%"/>
+<img src="image/0.jpg" width="10%" height="10%"/>
+</body>
+</html>
